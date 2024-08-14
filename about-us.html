@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css" media="all">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css" media="all">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+        <Style>
+
+body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+          }
+          
+
+          .dark-mode {
+            background-color: black;
+            color: white;
+          }
+
+        
+          /* The switch - the box around the slider */
+          
+          .topright{
+            position: fixed;
+            bottom: 8px;
+            right: 16px;
+            font-size: 18px;
+          }
+
+          .switch { position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px;
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+          }
+
+          /* Hide default HTML checkbox */
+          .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+          }
+
+          /* The slider */
+          .slider {
+          --background: #28096b;
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: var(--background);
+          transition: .5s;
+          border-radius: 30px;
+          }
+
+          .slider:before {
+          position: absolute;
+          content: "";
+          height: 1.4em;
+          width: 1.4em;
+          border-radius: 50%;
+          left: 10%;
+          bottom: 15%;
+          box-shadow: inset 8px -4px 0px 0px #fff000;
+          background: var(--background);
+          transition: .5s;
+          }
+
+          input:checked + .slider {
+  background-color: #522ba7;
+          }
+
+          input:checked + .slider:before {
+          transform: translateX(100%);
+          box-shadow: inset 15px -4px 0px 15px #fff000;
+          }
+
+           /* The slider */
+
+
+          /* Nav */
+          nav{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            
+          }
+
+          .menu{display:contents;
+            align-items: center;
+            justify-content: space-between;
+            
+          }
+
+          span{
+            color: blueviolet;
+          }
+
+          nav ul li{
+            list-style-type: none;
+            display: inline-block;
+            padding: 10px 20px;
+          }
+          
+          nav ul li a{
+            color: currentColor;
+            text-decoration: none ;
+            font-weight:600;
+            
+          }
+          
+          nav ul li a:hover{
+            color: blueviolet;
+            transition: .3s;
+          }
+
+          .humberger{
+            background-color: transparent;
+            border: 0;
+            color: currentColor;
+            font-size: 30px;
+            cursor: pointer;
+            display: none;
+          }
+
+          .humberger:focus{
+            outline: none;
+          }
+
+          @media screen and (max-width: 767px){
+            .menu{
+              display: none;
+              width: 100%;
+              flex-direction: column;
+            }
+
+            .bar{
+              display: none;
+            }
+
+
+
+            .menu.show{
+              display: flex;
+            }
+
+
+            .humberger{
+              display: block;
+            }
+          }
+
+          
+
+          /* Nav */
+
+
+          /* Sign-Up button */
+          button1 {
+  position: relative;
+  display: inline-block;
+  padding: 8px 8px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: blueviolet;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 3px solid blueviolet;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 blueviolet;
+}
+
+button1:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 blueviolet;
+}
+
+button1:active {
+  transform: scale(0.9);
+}
+         /* Sign-Up button */
+
+
+         /* main */
+         
+.social-link {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  border-radius: 50%;
+  transition: all 0.3s;
+  font-size: 0.9rem;
+}
+
+.social-link:hover,
+.social-link:focus {
+  background: #ddd;
+  text-decoration: none;
+  color: #555;
+}
+         /* main */
+
+        </Style>
+
+<title>AboutUs</title>
+</head>
+<body>
+  
+
+  <!-- nav -->
+<div class="hero" style="text-decoration: none;">
+  <nav >
+  <div>
+    <h2 class="logo" ><a href="index.html" style="color: currentColor; text-decoration: none;"><b>Gib<span>bly</span></b></a></h2>
+  </div>
+  <button2 class="humberger" id="humberger">
+    <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+      <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+    </svg>
+  </button2>
+  <div class="menu" id="menu">
+    <ul >
+      <li><a href="index.html">Home</a></li>
+      <li><a href="/index.html#feature">Features</a></li>
+      <li><a href="/about-us.html">About Us</a></li>
+      
+    </ul>
+    <div >
+      <button1><a href="/SelectSignup.html" style="color: currentColor; text-decoration: none;"><b>Sign-Up</b></a></button1>
+      <button1><a href="/SelectLogin.html" style="color: currentColor; text-decoration: none;"><b>Log-in</b></a></button1>
+      
+    </div>
+  </div>
+  </nav>
+</div>
+
+<!-- nav -->
+
+
+
+<!-- main -->
+
+
+  
+  <div style="color: currentColor;">
+    <div class="container py-5">
+      <div class="row h-100 align-items-center py-5">
+        <div class="col-lg-6">
+          <h1 style="font-size:72px;" ><b>About <span>Us</span></b></h1>
+          <p class="lead mb-0">Create lessons, gamified quizzes, assessments, and review assignments that your students love and that save you hours of prep every week.</p>
+          <p class="lead"><b>Stay in the loop!</b>
+          </p>
+          <button1><a href="https://www.youtube.com/watch?v=hChoaaIc6No" target=”_blank” style="text-decoration: none; color: currentColor;">Watch Video</a></button1>
+        </div>
+        <div class="col-lg-6 d-none d-lg-block"><img src="https://bootstrapious.com/i/snippets/sn-about/illus.png" alt="" class="img-fluid"></div>
+      </div>
+    </div>
+  </div>
+  
+  <div class=" py-5" style="color: currentColor;">
+    <div class="container py-5">
+      <div class="row align-items-center mb-5">
+        <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
+          <h2 class="font-weight-light">AI Lesson Generator</h2>
+          <p class="font-italic mb-4">With a few button clicks, generate full lesson slides and lesson plan on any topic with AI.</p><button1><a href="#" style="color: currentColor; text-decoration: none;">Learn More</a></button1>
+        </div>
+        <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="/image/aboutus1.png" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+      </div>
+      <div class="row align-items-center">
+        <div class="col-lg-5 px-5 mx-auto"><img src="/image/aboutus2.png" alt="" class="img-fluid mb-4 mb-lg-0"></div>
+        <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
+          <h2 class="font-weight-light">AI Quiz Generator</h2>
+          <p class="font-italic mb-4">Generate a gamified quiz from a YouTube video, document, topic, or pasted text in no time.</p><button1><a href="#" style="color: currentColor; text-decoration: none;">Learn More</a></button1>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="py-5">
+    <div class="container py-5">
+      <div class="row mb-4">
+        <div class="col-lg-5">
+          <h2 class="display-4 "><b>Our team</b></h2>
+          <p class="font-italic ">Please Appritiate Our Team</p>
+        </div>
+      </div>
+  
+      <div class="row text-center">
+        <!-- Team item-->
+        <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-4.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Manuella Nevoresky</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
+            <ul class="social mb-0 list-inline mt-3">
+              <li class="list-inline-item"><a href="#" class="social-link" style="text-decoration: none;"><i class="fa fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="social-link" style="text-decoration: none;"><i class="fa fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="social-link" style="text-decoration: none;"><i class="fa fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="social-link" style="text-decoration: none;"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End-->
+  
+        <!-- Team item-->
+        <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-3.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Samuel Hardy</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
+            <ul class="social mb-0 list-inline mt-3">
+              <li class="list-inline-item"><a href="#" class="social-link" style="text-decoration: none;"><i class="fa fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="social-link" style="text-decoration: none;"><i class="fa fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="social-link" style="text-decoration: none;"><i class="fa fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="social-link" style="text-decoration: none;"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End-->
+  
+        <!-- Team item-->
+        <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-2.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">Tom Sunderland</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
+            <ul class="social mb-0 list-inline mt-3">
+              <li class="list-inline-item"><a href="#" class="social-link" style="text-decoration: none;"><i class="fa fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="social-link" style="text-decoration: none;"><i class="fa fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="social-link" style="text-decoration: none;"><i class="fa fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="social-link" style="text-decoration: none;"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End-->
+  
+        <!-- Team item-->
+        <div class="col-xl-3 col-sm-6 mb-5">
+          <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://bootstrapious.com/i/snippets/sn-about/avatar-1.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+            <h5 class="mb-0">John Tarly</h5><span class="small text-uppercase text-muted">CEO - Founder</span>
+            <ul class="social mb-0 list-inline mt-3">
+              <li class="list-inline-item"><a href="#" class="social-link" style="text-decoration: none;"><i class="fa fa-facebook-f"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="social-link" style="text-decoration: none;"><i class="fa fa-twitter"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="social-link" style="text-decoration: none;"><i class="fa fa-instagram"></i></a></li>
+              <li class="list-inline-item"><a href="#" class="social-link" style="text-decoration: none;"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- End-->
+  
+      </div>
+    </div>
+  </div>
+  
+
+
+
+
+<!-- main -->
+
+
+
+
+
+
+
+
+
+
+<!-- footer -->
+
+<div class="container" >
+    <br><br><br>
+    <footer class=" py-1 my-4" style="color: currentColor;">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3 " >
+            <li class="nav-item"><a href="index.html" class="nav-link px-2" style="color: currentColor;">Home</a></li>
+            <li class="nav-item"><a href="/index.html#feature" class="nav-link px-2 "style="color: currentColor;">Features</a></li>
+            <li class="nav-item"><a href="/about-us.html" class="nav-link px-2 "style="color: currentColor;">About us</a></li>
+            <li class="nav-item"><a href="/contact-us.html" class="nav-link px-2 "style="color: currentColor;">Contact us</a></li>
+        </ul>
+        <p class="text-center  ">&copy; 2023 Gib<span>bly</span> , Inc</p>
+    </footer>
+  </div>
+  
+  
+  
+  <!-- footer -->
+  
+  
+  
+  
+  <!-- theme -->
+  
+  <div class="topright">
+  <label class=" switch">
+      <input onclick="myFunction()" type="checkbox">
+      <span class="slider"></span>
+  </label>
+  </div>
+  
+  
+  
+  
+  
+  <script>
+  function myFunction() {
+     var element = document.body;
+     element.classList.toggle("dark-mode");
+  }
+  </script>
+      <!-- theme -->
+  
+  
+  <script async="" src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>       
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+  
+  
+  
+  
+  
+  </body>
+  </html>

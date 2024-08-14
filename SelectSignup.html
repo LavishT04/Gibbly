@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css" media="all">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css" media="all">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+
+
+    <title>Choose Your Account Type</title>
+    <style>
+
+body {
+            padding: 25px;
+            background-color: white;
+            color: black;
+            font-size: 25px;
+          }
+          
+
+          .dark-mode {
+            background-color: black;
+            color: white;
+          }
+
+        
+          /* The switch - the box around the slider */
+          
+          .topright{
+            position: fixed;
+            bottom: 8px;
+            right: 16px;
+            font-size: 18px;
+          }
+
+          .switch { position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px;
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+          }
+
+          /* Hide default HTML checkbox */
+          .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+          }
+
+          /* The slider */
+          .slider {
+          --background: #28096b;
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: var(--background);
+          transition: .5s;
+          border-radius: 30px;
+          }
+
+          .slider:before {
+          position: absolute;
+          content: "";
+          height: 1.4em;
+          width: 1.4em;
+          border-radius: 50%;
+          left: 10%;
+          bottom: 15%;
+          box-shadow: inset 8px -4px 0px 0px #fff000;
+          background: var(--background);
+          transition: .5s;
+          }
+
+          input:checked + .slider {
+  background-color: #522ba7;
+          }
+
+          input:checked + .slider:before {
+          transform: translateX(100%);
+          box-shadow: inset 15px -4px 0px 15px #fff000;
+          }
+
+           /* The slider */
+
+		   
+          /* Nav */
+          nav{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            
+          }
+
+          .menu{display:contents;
+            align-items: center;
+            justify-content: space-between;
+            
+          }
+
+          span{
+            color: blueviolet;
+          }
+
+          nav ul li{
+            list-style-type: none;
+            display: inline-block;
+            padding: 10px 20px;
+          }
+          
+          nav ul li a{
+            color: currentColor;
+            text-decoration: none ;
+            font-weight:600;
+            
+          }
+          
+          nav ul li a:hover{
+            color: blueviolet;
+            transition: .3s;
+          }
+
+          .humberger{
+            background-color: transparent;
+            border: 0;
+            color: currentColor;
+            font-size: 30px;
+            cursor: pointer;
+            display: none;
+          }
+
+          .humberger:focus{
+            outline: none;
+          }
+
+          @media screen and (max-width: 767px){
+            .menu{
+              display: none;
+              width: 100%;
+              flex-direction: column;
+            }
+
+            .bar{
+              display: none;
+            }
+
+
+
+            .menu.show{
+              display: flex;
+            }
+
+
+            .humberger{
+              display: block;
+            }
+          }
+
+          
+
+          /* Nav */
+
+		            /* Sign-Up button */
+					button1 {
+  position: relative;
+  display: inline-block;
+  padding: 8px 8px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: blueviolet;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 3px solid blueviolet;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 blueviolet;
+}
+
+button1:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 blueviolet;
+}
+
+button1:active {
+  transform: scale(0.9);
+}
+         /* Sign-Up button */
+
+        
+        .container {
+            display: flex;
+            max-width: 1000px;
+            margin: auto;
+            background-color: white;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .left-panel {
+            background-color: blueviolet;
+            color: white;
+            padding: 6px 40px;
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .right-panel {
+            padding: 60px 40px;
+            width: 60%;
+        }
+        h1 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            line-height: 1.3;
+        }
+        p {
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+        .account-type {
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .account-type:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .account-type.selected {
+            border-color: blueviolet;
+            background-color: #f0fff5;
+        }
+        .account-type-icon {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 50%;
+            margin-right: 15px;
+            vertical-align: middle;
+        }
+        .account-type strong {
+            font-size: 18px;
+            vertical-align: middle;
+        }
+        
+        .btn {
+            background-color: blueviolet;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #9d07fa;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+<body>
+
+	  <!-- nav -->
+<div class="hero" style="text-decoration: none;">
+	<nav >
+	<div>
+	  <h2 class="logo" ><a href="index.html" style="color: currentColor; text-decoration: none;"><b>Gib<span>bly</span></b></a></h2>
+	</div>
+	<button2 class="humberger" id="humberger">
+	  <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+		<path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+	  </svg>
+	</button2>
+	<div class="menu" id="menu">
+	  <ul >
+		<li><a href="index.html">Home</a></li>
+		<li><a href="/index.html#feature">Features</a></li>
+		<li><a href="/about-us.html">About Us</a></li>
+		
+	  </ul>
+	  <div >
+		<button1><a href="SelectSignup.html" style="color: currentColor; text-decoration: none;"><b>Sign-Up</b></a></button1>
+		<button1><a href="SelectLogin.html" style="color: currentColor; text-decoration: none;"><b>Log-in</b></a></button1>
+		
+	  </div>
+	</div>
+	</nav>
+  </div>
+  
+  <!-- nav -->
+
+  <br>
+  <br>
+
+
+	<!-- main -->
+    <div class="container">
+        <div class="left-panel">
+            <div class="logo"><img src="/image/books(1).png" height="150" width="150" alt="">
+            <h1>Sign-up To Your Account</h1>
+            <p>Great things are waiting for you</p></div>
+        </div>
+        <div class="right-panel" style="color: black;">
+
+            <h1>Choose your account type</h1>
+            
+            <div class="account-type" data-type="business">
+                <span class="account-type-icon"><img src="/image/teacher.png" height="45" width="45" alt=""></span>
+                <strong>Teacher</strong>
+                
+            </div>
+            <div class="account-type" data-type="personal">
+                <span class="account-type-icon"><img src="/image/student.png" height="40" width="40" alt=""></span>
+                <strong>Student</strong>
+                
+            </div>
+            <button class="btn" id="continueBtn" >Continue</button>
+        </div>
+    </div>
+    <!-- main -->
+
+
+	<!-- footer -->
+
+<div class="container11`" >
+    <br><br><br>
+    <footer class=" py-1 my-4" style="color: currentColor;">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3 " >
+            <li class="nav-item"><a href="index.html" class="nav-link px-2" style="color: currentColor;">Home</a></li>
+            <li class="nav-item"><a href="/index.html#feature" class="nav-link px-2 "style="color: currentColor;">Features</a></li>
+            <li class="nav-item"><a href="/about-us.html" class="nav-link px-2 "style="color: currentColor;">About us</a></li>
+            <li class="nav-item"><a href="/contact-us.html" class="nav-link px-2 "style="color: currentColor;">Contact us</a></li>
+        </ul>
+        <p class="text-center  ">&copy; 2023 Gib<span>bly</span> , Inc</p>
+    </footer>
+  </div>
+  
+  
+  
+  <!-- footer -->
+  
+  
+  
+  
+  <!-- theme -->
+  
+  <div class="topright">
+	<label class=" switch">
+		<input onclick="myFunction()" type="checkbox">
+		<span class="slider"></span>
+	</label>
+	</div>
+	
+	
+	
+	
+	
+	<script>
+	function myFunction() {
+	   var element = document.body;
+	   element.classList.toggle("dark-mode");
+	}
+	</script>
+		<!-- theme -->
+	
+	
+	<script async="" src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+	<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>       
+	<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+	
+	
+
+    <script>
+        const accountTypes = document.querySelectorAll('.account-type');
+        const continueBtn = document.getElementById('continueBtn');
+        let selectedType = null;
+
+        accountTypes.forEach(type => {
+            type.addEventListener('click', () => {
+                accountTypes.forEach(t => t.classList.remove('selected'));
+                type.classList.add('selected');
+                selectedType = type.dataset.type;
+                continueBtn.disabled = false;
+            });
+        });
+
+        continueBtn.addEventListener('click', () => {
+            if (selectedType) {
+                switch(selectedType) {
+                    case 'business':
+                        window.location.href = '/registerTeachers.html';
+                        break;
+                    case 'personal':
+                        window.location.href = '/registerStudents.html';
+                        break;
+                    default:
+                        console.error('Invalid account type selected');
+                }
+            }
+        });
+    </script>
+</body>
+</html>

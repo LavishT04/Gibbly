@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css" media="all">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/livecanvas-team/ninjabootstrap/dist/css/bootstrap.min.css" media="all">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+        <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
+
+    <script>$(function () {
+        $('input, select').on('focus', function () {
+            $(this).parent().find('.input-group-text').css('border-color', '#80bdff');
+        });
+        $('input, select').on('blur', function () {
+            $(this).parent().find('.input-group-text').css('border-color', '#ced4da');
+        });
+    });
+    </script>
+
+    <style>
+
+body {
+  padding: 25px;
+  background-color: white;
+  color: black;
+  font-size: 25px;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+        
+          /* The switch - the box around the slider */
+          
+          .topright{
+            position: fixed;
+            bottom: 8px;
+            right: 16px;
+            font-size: 18px;
+          }
+
+          .switch { position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px;
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 3.5em;
+  height: 2em;
+          }
+
+          /* Hide default HTML checkbox */
+          .switch input {
+          opacity: 0;
+          width: 0;
+          height: 0;
+          }
+
+          /* The slider */
+          .slider {
+          --background: #28096b;
+          position: absolute;
+          cursor: pointer;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: var(--background);
+          transition: .5s;
+          border-radius: 30px;
+          }
+
+          .slider:before {
+          position: absolute;
+          content: "";
+          height: 1.4em;
+          width: 1.4em;
+          border-radius: 50%;
+          left: 10%;
+          bottom: 15%;
+          box-shadow: inset 8px -4px 0px 0px #fff000;
+          background: var(--background);
+          transition: .5s;
+          }
+
+          input:checked + .slider {
+          background-color: #522ba7;
+          }
+
+          input:checked + .slider:before {
+          transform: translateX(100%);
+          box-shadow: inset 15px -4px 0px 15px #fff000;
+          }
+
+           /* The slider */
+
+
+          /* Nav */
+          nav{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            
+          }
+
+          .menu{display:contents;
+            align-items: center;
+            justify-content: space-between;
+            
+          }
+
+          span{
+            color: blueviolet;
+          }
+
+          nav ul li{
+            list-style-type: none;
+            display: inline-block;
+            padding: 10px 20px;
+          }
+          
+          nav ul li a{
+            color: currentColor;
+            text-decoration: none ;
+            font-weight:600;
+            
+          }
+          
+          nav ul li a:hover{
+            color: blueviolet;
+            transition: .3s;
+          }
+
+          .humberger{
+            background-color: transparent;
+            border: 0;
+            color: currentColor;
+            font-size: 30px;
+            cursor: pointer;
+            display: none;
+          }
+
+          .humberger:focus{
+            outline: none;
+          }
+
+          @media screen and (max-width: 767px){
+            .menu{
+              display: none;
+              width: 100%;
+              flex-direction: column;
+            }
+
+            .bar{
+              display: none;
+            }
+
+
+
+            .menu.show{
+              display: flex;
+            }
+
+
+            .humberger{
+              display: block;
+            }
+          }
+
+          
+
+          /* Nav */
+
+/* Sign-Up button */
+button1 {
+  position: relative;
+  display: inline-block;
+  padding: 8px 8px;
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: blueviolet;
+  background: transparent;
+  cursor: pointer;
+  transition: ease-out 0.5s;
+  border: 3px solid blueviolet;
+  border-radius: 10px;
+  box-shadow: inset 0 0 0 0 blueviolet;
+}
+
+button1:hover {
+  color: white;
+  box-shadow: inset 0 -100px 0 0 blueviolet;
+}
+
+button1:active {
+  transform: scale(0.9);
+}
+         /* Sign-Up button */
+
+
+
+
+
+.border-md {
+    border-width: 2px;
+}
+
+.btn-facebook {
+    background: #405D9D;
+    border: none;
+}
+
+.btn-facebook:hover, .btn-facebook:focus {
+    background: #314879;
+}
+
+.btn-twitter {
+    background: #42AEEC;
+    border: none;
+}
+
+.btn-twitter:hover, .btn-twitter:focus {
+    background: #1799e4;
+}
+
+
+
+
+
+.form-control:not(select) {
+    padding: 1.5rem 0.5rem;
+}
+
+select.form-control {
+    height: 52px;
+    padding-left: 0.5rem;
+}
+
+.form-control::placeholder {
+    color: #ccc;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+.form-control:focus {
+    box-shadow: none;
+}
+
+
+
+
+    </style>
+
+
+
+
+
+    <title>Document</title>
+</head>
+<body>
+    
+  <!-- nav -->
+  <div class="hero">
+    <nav >
+    <div>
+      <h2 class="logo"><a href="index.html" style="text-decoration: none; color: currentColor;"><b>Gib<span>bly</span></b></a></h2>
+    </div>
+    <button2 class="humberger" id="humberger">
+      <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
+        <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"/>
+      </svg>
+    </button2>
+    <div class="menu" id="menu">
+      <ul >
+        <li><a href="index.html">Home</a></li>
+        <li><a href="/index.html#feature">Features</a></li>
+        <li><a href="/about-us.html">About Us</a></li>
+      </ul>
+      <div >
+        
+        <button1><a href="/SelectLogin.html" style="text-decoration: none; color: currentColor;"><b>Log-in</b></a></button1>
+        
+      </div>
+    </div>
+    </nav>
+  </div>
+  
+  <!-- nav -->
+
+
+
+
+
+<!-- form -->
+    <div class="container" style="color: currentColor;">
+        <div class="row py-5 mt-4 align-items-center">
+            
+            <div class="col-md-5 pr-lg-5 mb-5 mb-md-0">
+                <img src="https://bootstrapious.com/i/snippets/sn-registeration/illustration.svg" alt="" class="img-fluid mb-3 d-none d-md-block">
+                <h1>Create an Account</h1>
+                <p class="font-italic mb-0">By signing up and continuing to use the service, you accept our Terms of Service , agree to receiving emails from us, and consent to our use of cookies. Please read our Privacy Policy.</p>
+                
+                </p>
+            </div>
+    
+            <!-- Registeration Form -->
+            <div class="col-md-7 col-lg-6 ml-auto">
+                <form action="#">
+                    <div class="row">
+    
+                        <!-- First Name -->
+                        <div class="input-group col-lg-6 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-user text-muted"></i>
+                                </span>
+                            </div>
+                            <input id="firstName" type="text" name="firstname" placeholder="First Name" class="form-control bg-white border-left-0 border-md">
+                        </div>
+    
+                        <!-- Last Name -->
+                        <div class="input-group col-lg-6 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-user text-muted"></i>
+                                </span>
+                            </div>
+                            <input id="lastName" type="text" name="lastname" placeholder="Last Name" class="form-control bg-white border-left-0 border-md">
+                        </div>
+    
+                        <!-- Email Address -->
+                        <div class="input-group col-lg-12 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-envelope text-muted"></i>
+                                </span>
+                            </div>
+                            <input id="email" type="email" name="email" placeholder="Email Address" class="form-control bg-white border-left-0 border-md">
+                        </div>
+    
+                        <!-- Phone Number -->
+                        <div class="input-group col-lg-12 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-phone-square text-muted"></i>
+                                </span>
+                            </div>
+                            <select id="countryCode" name="countryCode" style="max-width: 80px" class="custom-select form-control bg-white border-left-0 border-md h-100 font-weight-bold text-muted">
+                                <option value="">+1</option>
+                                <option value="">+91</option>
+                                <option value="">+125</option>
+                                <option value="">+41</option>
+                            </select>
+                            <input id="phoneNumber" type="tel" name="phone" placeholder="Phone Number" class="form-control bg-white border-md border-left-0 pl-3">
+                        </div>
+    
+    
+                        
+    
+                        <!-- Password -->
+                        <div class="input-group col-lg-6 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-lock text-muted"></i>
+                                </span>
+                            </div>
+                            <input id="password" type="password" name="password" placeholder="Password" class="form-control bg-white border-left-0 border-md">
+                        </div>
+    
+                        <!-- Password Confirmation -->
+                        <div class="input-group col-lg-6 mb-4">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text bg-white px-4 border-md border-right-0">
+                                    <i class="fa fa-lock text-muted"></i>
+                                </span>
+                            </div>
+                            <input id="passwordConfirmation" type="password" name="passwordConfirmation" placeholder="Confirm Password" class="form-control bg-white border-left-0 border-md">
+                        </div>
+     
+                        <!-- Submit Button -->
+                        <div class="form-group col-lg-12 mx-auto mb-0" style="text-align: center;">
+                            <a href="/dashboardstudents/index.html" class="btn btn-primary btn-block py-2">
+                                <span2 class="font-weight-bold">Create your account</span2>
+                            </a>
+                        </div>
+    
+                        <!-- Divider Text -->
+                        <div class="form-group col-lg-12 mx-auto d-flex align-items-center my-4">
+                            <div class="border-bottom w-100 ml-5"></div>
+                            <span1 class="px-2 small font-weight-bold ">OR</span1>
+                            <div class="border-bottom w-100 mr-5"></div>
+                        </div>
+    
+                        <!-- Social Login -->
+                        <div style="text-align: center;">
+                        <div class="form-group col-lg-12 mx-auto">
+                            <a href="#" class="btn btn-block py-2 btn-facebook">
+                                <i class="fa fa-facebook-f mr-2"></i>
+                                <span1 class="font-weight-bold">Continue with Facebook</span1>
+                            </a>
+                            <a href="#" class="btn btn-block py-2 btn-twitter">
+                                <i class="fa fa-twitter mr-2"></i>
+                                <span1 class="font-weight-bold">Continue with Twitter</span1>
+                            </a>
+                        </div></div><br><br>
+    
+                        <!-- Already Registered -->
+                        <div class="text-center w-100">
+                            <p class=" font-weight-bold">Already Registered? <a href="/Select.html" class="text-primary ml-2">Login</a></p>
+                        </div>
+    
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<!-- form -->
+
+
+
+
+<!-- theme -->
+
+<div class="topright">
+    <label class=" switch">
+        <input onclick="myFunction()" type="checkbox">
+        <span class="slider"></span>
+    </label>
+    </div>
+    
+<!-- theme -->
+
+
+
+
+    <script async="" src="https://unpkg.com/smoothscroll-polyfill/dist/smoothscroll.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>       
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+
+<!-- Theme script -->
+
+<script>
+    function myFunction() {
+       var element = document.body;
+       element.classList.toggle("dark-mode");
+    }
+    </script>
+<!-- Theme script -->
+
+</body>
+</html>
